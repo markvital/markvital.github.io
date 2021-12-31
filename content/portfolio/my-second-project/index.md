@@ -1,6 +1,8 @@
 ---
-title: My Second Project!
+title: My 2nd Project missing cover
 date: "2015-05-06T23:46:37.121Z"
+
+thumbImage: ./thumb/thumb.jpeg
 ---
 
 Wow! I love blogging so much already.
