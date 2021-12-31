@@ -6,7 +6,7 @@ module.exports = {
       summary: `I am Anna Vital, an information designer who lives in crypto universe and creating infographic art.`,
     },
     description: `Anna Vital personal website`,
-    siteUrl: `https://anna.vc/`,
+    siteUrl: `https://markvital.github.io/`,
     social: {
       twitter: `annavitals`,
     },
