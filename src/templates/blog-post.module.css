@@ -1,0 +1,23 @@
+.projectPage {
+
+}
+
+.cover {
+
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.cover, .title {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+}

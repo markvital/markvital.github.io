@@ -1,26 +1,48 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import * as styles from "./layout.module.css"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, type }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          author {
+            name
+          }
+          social {
+            twitter
+          }
+        }
+      }
+    }
+  `)
+  const author = data.site.siteMetadata?.author
+  const social = data.site.siteMetadata?.social
   const header = (
-    <div>
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-      &nbsp; &nbsp;
-      <Link className="header-link-home" to="/about">
-        about
-      </Link>
-      &nbsp; &nbsp;
-      <Link className="header-link-home" to="/work">
-        works
-      </Link>
-      &nbsp; &nbsp;
-      <Link className="header-link-home" to="/contact">
-        contact
-      </Link>
+    <div className={styles.header}>
+      <nav className={styles.menu}>
+        <Link className={styles.logo} to="/">
+          <StaticImage
+            className={styles.avatar}
+            layout="fixed"
+            formats={["auto", "webp", "avif"]}
+            src="../images/profile-pic.png"
+            width={35}
+            height={35}
+            quality={95}
+            alt={author?.name}
+          />
+          <span>{author?.name}</span>
+        </Link>
+        <Link className={styles.menuItem} to="/about">about</Link>
+        <Link className={styles.menuItem} to="/work">works</Link>
+        <Link className={styles.menuItem} to="/contact">contact</Link>
+        <a className={styles.social} href={`https://twitter.com/${social?.twitter || ``}`}></a>
+      </nav>
     </div>
   )
 
@@ -34,11 +56,9 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <main className={type === "full" ? styles.pageFull : styles.pageColumn}>{children}</main>
+      <footer className={styles.footer}>
+        Anna Vital © {new Date().getFullYear()}
       </footer>
     </div>
   )

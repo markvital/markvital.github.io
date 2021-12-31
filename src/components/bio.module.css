@@ -1,0 +1,17 @@
+.bio {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center
+}
+
+.bio aside {
+    margin-right: 20px;
+}
+
+.headline {
+    font-size: 1.25em;
+    margin: 0;
+}

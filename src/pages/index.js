@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as styles from "./styles/index.module.css"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -25,9 +26,10 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} type="full">
       <Seo title="All posts" />
       <Bio />
+      <p className={styles.subHeadline}>My selected works:</p>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

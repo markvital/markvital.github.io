@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import * as styles from "./blog-post.module.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -19,15 +19,15 @@ const PortfolioProjectTemplate = ({ data, location, pageContext }) => {
       />
       <div>
         { coverImage &&
-          <GatsbyImage image={coverImage} alt="test" width={500} />
+          <GatsbyImage image={coverImage} className={styles.cover} width={500} />
         }
       </div>
       <article
-        className="blog-post"
+        className={styles.projectPage}
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header style={{paddingBottom: '50px'}}>
+        <header className={styles.title}>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {/*<p>{post.frontmatter.date}</p>*/}
         </header>
