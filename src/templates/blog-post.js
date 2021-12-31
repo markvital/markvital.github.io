@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogPostTemplate = ({ data, location }) => {
+const PortfolioProjectTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
@@ -21,9 +21,9 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
+        <header style={{paddingBottom: '50px'}}>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          {/*<p>{post.frontmatter.date}</p>*/}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-          <Bio />
+
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -64,7 +64,7 @@ const BlogPostTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default PortfolioProjectTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

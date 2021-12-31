@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Anna Vital's website`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Anna Vital`,
+      summary: `I am Anna Vital, an information designer who lives in crypto universe and creating infographic art.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Anna Vital personal website`,
+    siteUrl: `https://anna.vc/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `annavitals`,
     },
   },
   plugins: [
@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/portfolio`,
+        name: `portfolio`,
       },
     },
     {

@@ -4,21 +4,32 @@ import { Link } from "gatsby"
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
+  const header = (
+    <div>
       <Link className="header-link-home" to="/">
         {title}
       </Link>
-    )
+      &nbsp; &nbsp;
+      <Link className="header-link-home" to="/about">
+        about
+      </Link>
+      &nbsp; &nbsp;
+      <Link className="header-link-home" to="/work">
+        works
+      </Link>
+      &nbsp; &nbsp;
+      <Link className="header-link-home" to="/contact">
+        contact
+      </Link>
+    </div>
+  )
+
+/*
+  if (isRootPath) {
+    // show only on homepage
+  } else {
   }
+*/
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
