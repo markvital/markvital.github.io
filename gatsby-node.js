@@ -75,6 +75,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
+  // @TODO: add default values to frontMatter for thumbnails and cover, so each time they don't have to be defined explicitly
+  // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization/#setting-default-field-values
+
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
 
