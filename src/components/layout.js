@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import * as styles from "./layout.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Layout = ({ location, title, children, type }) => {
+const Layout = ({ location, children, type }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const data = useStaticQuery(graphql`
@@ -40,8 +40,8 @@ const Layout = ({ location, title, children, type }) => {
         </Link>
         <Link className={styles.menuItem} to="/about">about</Link>
         <Link className={styles.menuItem} to="/work">works</Link>
-        <Link className={styles.menuItem} to="/contact">contact</Link>
-        <a className={styles.social} href={`https://twitter.com/${social?.twitter || ``}`}></a>
+        <Link className={`${styles.menuItem} hidden-xs`} to="/contact">contact</Link>
+        <a className={styles.social} aria-label="Twitter" href={`https://twitter.com/${social?.twitter || ``}`}> </a>
       </nav>
     </div>
   )

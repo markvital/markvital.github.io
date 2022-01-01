@@ -1,15 +1,16 @@
 import * as React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const AboutPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <Seo title="Contact Anna Vital" />
+      <Seo
+        title="Contact Anna Vital"
+        description="Please submit additional details to contact her"
+      />
       <h1>Contact Me</h1>
       <p>
         Please fill out the form below to contact me.
@@ -23,12 +24,3 @@ const AboutPage = ({ data, location }) => {
 
 export default AboutPage
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

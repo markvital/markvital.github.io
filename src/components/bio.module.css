@@ -1,7 +1,6 @@
 .bio {
     max-width: 650px;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
     font-size: 1.25em;
     display: flex;
     align-items: center
@@ -14,4 +13,8 @@
 .headline {
     font-size: 1.25em;
     margin: 0;
+}
+
+.avatar {
+
 }

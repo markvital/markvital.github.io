@@ -1,20 +1,20 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 import * as styles from "./styles/index.module.css"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { PortfolioGrid } from "../components/portfolio-grid"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `Anna Vital's website`
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+      <Layout location={location}>
+        <Seo title={siteTitle} />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -30,40 +30,7 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       <Bio />
       <p className={styles.subHeadline}>My selected works:</p>
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          const thumbImage = getImage(post.frontmatter.thumbImage)
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <GatsbyImage image={thumbImage} />
-                  {/*<small>{post.frontmatter.date}</small>*/}
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+      <PortfolioGrid posts={posts} />
     </Layout>
   )
 }
@@ -89,7 +56,7 @@ export const pageQuery = graphql`
           description
           thumbImage {
             childImageSharp {
-              gatsbyImageData(layout:FIXED, width: 200)
+              gatsbyImageData(layout:FIXED, width: 350, aspectRatio: 1)
             }
           }
         }

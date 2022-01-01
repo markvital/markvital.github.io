@@ -3,17 +3,22 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { PortfolioGrid } from "../components/portfolio-grid"
 
 
 const WorkPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Seo title="Anna Vital works" />
-      <h1>My Work</h1>
-      <p>Here is a collection of my work:</p>
-      <p>&lt; not implemented yet &gt;</p>
+    <Layout location={location} type={"full"}>
+      <Seo
+        title="Anna Vital works"
+        description="Most important works of Anna Vital"
+      />
+      <p style={{textAlign:"center", color:"grey", fontSize: "1.25em"}}>
+        Here is a collection of my works:
+      </p>
+      <PortfolioGrid posts={posts} />
     </Layout>
   )
 }
@@ -22,9 +27,22 @@ export default WorkPage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          thumbImage {
+            childImageSharp {
+              gatsbyImageData(layout:FIXED, width: 350, aspectRatio: 1)
+            }
+          }
+        }
       }
     }
   }

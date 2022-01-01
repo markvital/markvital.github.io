@@ -37,7 +37,7 @@ h1, h2, h3, h4 {
 }
 
 @media screen and (min-width: 1200px) {
-  .hidden-xs {
+  .hidden-xl {
     display: none;
   }
 }

@@ -1,0 +1,33 @@
+.gridContainer {
+    display: grid; /* 1 */
+    grid-template-columns: repeat(auto-fill, 350px); /* 2 */
+    grid-gap: 50px 50px; /* 3 */
+    justify-content: center; /* 4 */
+}
+
+.gridContainer a {
+    text-decoration: none;
+}
+
+.gridContainer a:hover .title {
+    color: #727272;
+}
+
+.gridContainer a:hover img{
+    filter: saturate(25%);
+}
+
+.gridItem {
+    height: 400px;
+}
+
+.thumbnail {
+
+}
+
+.title {
+    text-align: center;
+    color: #9f9c9d;
+    margin: 0;
+    margin-top: 15px;
+}
