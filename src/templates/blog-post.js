@@ -7,9 +7,12 @@ import Seo from "../components/seo"
 
 const PortfolioProjectTemplate = ({ data, location, pageContext }) => {
   const post = data.markdownRemark
+  const {itemImages} = data;
+  const itemImagesMap = itemImages.edges.reduce((map, i) => ({ ...map, [i.node.base]: i.node.childImageSharp }), {});
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
   const coverImage = getImage(post.frontmatter.coverImage)
+  const items  = post.frontmatter.items
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -19,7 +22,7 @@ const PortfolioProjectTemplate = ({ data, location, pageContext }) => {
       />
       <div>
         { coverImage &&
-          <GatsbyImage image={coverImage} className={styles.cover} width={500} />
+          <GatsbyImage image={coverImage} className={styles.cover} />
         }
       </div>
       <article
@@ -35,6 +38,31 @@ const PortfolioProjectTemplate = ({ data, location, pageContext }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        {items && (items.length > 0) &&
+        <section id="items" className={styles.items}>
+          <h2>Project items</h2>
+          <ul>
+            {items.map((item, i) => {
+              const theImage = itemImagesMap[item.image]
+              const itemImage = theImage && getImage(theImage)
+              return (
+                <li key={i}>
+                  <Link to={location.pathname  + item.image.split(".")[0]} title={item.title}>
+                    <figure>
+                      {itemImage ?
+                        <GatsbyImage className={styles.gatsbyImage} image={itemImage}/>
+                        :
+                        <div className={styles.emptyImage} />
+                      }
+                      <figcaption>{item.title}</figcaption>
+                    </figure>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+        }
         <hr />
         <footer>
 
@@ -77,6 +105,7 @@ export const pageQuery = graphql`
     $id: String!
     $previousPostId: String
     $nextPostId: String
+    $itemsDir: String
   ) {
     site {
       siteMetadata {
@@ -91,9 +120,24 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        items {
+          title
+          image
+        }
         coverImage {
           childImageSharp {
             gatsbyImageData(layout:FULL_WIDTH)
+          }
+        }
+      }
+    }
+    itemImages: allFile(filter: {relativeDirectory: {eq: $itemsDir}}) {
+      edges {
+        node {
+          base
+          relativeDirectory
+          childImageSharp {
+            gatsbyImageData(layout:FIXED, width: 300, aspectRatio: 1)
           }
         }
       }
