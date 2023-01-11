@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Anna Vital's website`,
+    title: `Mark Vital's portfolio website`,
     author: {
-      name: `Anna Vital`,
-      summary: `I am Anna Vital, an information designer who lives in crypto universe and creating infographic art.`,
+      name: `Mark Vital`,
+      summary: `I am Mark Vital, a software developer and information designer who lives in crypto universe and writing awesome code.`,
     },
-    description: `Anna Vital personal website`,
-    siteUrl: `https://annavital.github.io/`,
+    description: `Mark Vital, software developer and information designer.`,
+    siteUrl: `https://markvital.github.io/`,
     social: {
-      twitter: `annavitals`,
+      twitter: `markvitals`,
     },
   },
   plugins: [
