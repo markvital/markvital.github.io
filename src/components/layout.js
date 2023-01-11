@@ -58,7 +58,7 @@ const Layout = ({ location, children, type }) => {
       <header className="global-header">{header}</header>
       <main className={type === "full" ? styles.pageFull : styles.pageColumn}>{children}</main>
       <footer className={styles.footer}>
-        Anna Vital © {new Date().getFullYear()}
+        {author?.name} © {new Date().getFullYear()}
       </footer>
     </div>
   )
