@@ -1,9 +1,21 @@
 ---
-title: Human Sketches
-date: "2011-01-28T22:40:32.169Z"
+title: Dark Thoughts Visualized
+date: "2019-01-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
-coverImage: ./thumb/cover.jpeg
-thumbImage: ./thumb/thumb.jpeg
+coverImage: ./thumb/cover.jpg
+thumbImage: ./thumb/thumb.jpg
+items:
+  - title:  How Not To Be Hard On Yourself
+    description: This is the best piece I've ever done 
+    image:  how-to-not-be-hard-on-yourself.jpg
+    
+  - title:  Why People Give Up
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    image:  why-people-give-up.jpg
+    
+  - title:  Why People Break Down
+    description: 
+    image:  why-people-break-down.jpg
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and
