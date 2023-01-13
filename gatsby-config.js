@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Mark Vital's portfolio website`,
+    title: `mvital.eth - portfolio website`,
     author: {
-      name: `Mark Vital`,
-      summary: `I am Mark Vital, a software developer and information designer who lives in crypto universe and writing awesome code.`,
+      name: `mvital.eth`,
+      summary: `I am mvital.eth, a web developer and information designer who lives in crypto universe and builds things with code.`,
     },
-    description: `Mark Vital, software developer and information designer.`,
+    description: `mvital.eth, software developer and information designer.`,
     siteUrl: `https://markvital.github.io/`,
     social: {
       twitter: `markvitals`,
