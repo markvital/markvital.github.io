@@ -16,7 +16,7 @@ const WorkPage = ({ data, location }) => {
         description="Most important works of Anna Vital"
       />
       <p style={{textAlign:"center", color:"grey", fontSize: "1.25em"}}>
-        Here is a collection of my works:
+        Here is my portfolio:
       </p>
       <PortfolioGrid posts={posts} />
     </Layout>

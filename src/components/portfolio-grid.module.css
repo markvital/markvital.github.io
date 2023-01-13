@@ -5,6 +5,10 @@
     justify-content: center; /* 4 */
 }
 
+.gridContainer a img{
+    filter: saturate(25%);
+}
+
 .gridContainer a {
     text-decoration: none;
 }
@@ -14,7 +18,7 @@
 }
 
 .gridContainer a:hover img{
-    filter: saturate(25%);
+    filter: saturate(100%);
 }
 
 .gridItem {
@@ -22,7 +26,8 @@
 }
 
 .thumbnail {
-
+    border-radius: 5px;
+    border: 2px solid #cdcdcd;
 }
 
 .title {

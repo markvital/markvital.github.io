@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle} type="full">
       <Seo title="All posts" />
       <Bio />
-      <p className={styles.subHeadline}>My selected works:</p>
+      <p className={styles.subHeadline}>Portfolio</p>
       <PortfolioGrid posts={posts} />
     </Layout>
   )

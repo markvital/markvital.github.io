@@ -41,7 +41,7 @@ const Bio = () => {
         />
       </aside>
       <div>
-        <p className={styles.headline}>Visual Communication</p>
+        <p className={styles.headline}> Developing Software From Web2 to Web3</p>
         <p>{author?.summary || null}</p>
       </div>
     </div>

@@ -20,7 +20,8 @@
 }
 
 .cover {
-
+    max-width: 680px;
+    margin: auto;
 }
 
 .title {
@@ -32,7 +33,7 @@
     font-weight: bold;
 }
 
-.cover, .title {
+.title {
     width: 100vw;
     position: relative;
     margin-left: -50vw;
