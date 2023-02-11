@@ -9,23 +9,24 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Seo
-        title="About Anna Vital"
-        description="Anna Vital is an information designer and infographic author. She applies her visual thinking method in helping people visualize their own ideas, using her infographic making tools."
+        title="About Mark Vital"
+        description="Mark Vital is an information designer and programmer."
       />
         <article>
           <header style={{textAlign: "center"}}>
             <h1>About Me</h1>
           </header>
           <p id="intro">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+            Full stack developer with an eye for user interfaces and a sense of usability. 
+            I have worked in large corporations for half of my career and in a startups later on. I feel like I have now combined both the professionalism of working on advanced products with the hacker mindset of a startup. I lean towards using open-sources frameworks and tools to achieve fast results.
+         </p>
           <StaticImage
             className="about-cover"
             layout="FULL_WIDTH"
             formats={["jpg"]}
             src="../images/about-cover.jpg"
             quality={95}
-            alt="Anna Vital"
+            alt="Mark Vital"
           />
           <p id="extended-bio">
             {/* fill out extended bio here */}
