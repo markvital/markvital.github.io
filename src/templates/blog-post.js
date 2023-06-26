@@ -80,15 +80,15 @@ const PortfolioProjectTemplate = ({ data, location, pageContext }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link to={previous.fields.slug} rel="prev" title={previous.frontmatter.title}>
+                previous
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+              <Link to={next.fields.slug} rel="next" title={next.frontmatter.title} >
+                next
               </Link>
             )}
           </li>
