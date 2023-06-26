@@ -8,7 +8,7 @@ thumbImage: ./thumb/thumb.jpg
 
 Adioma is an infographic maker that automates design for you using visual language and infographic templates using timelines, grids, and icons. It allows you to create professional infographics in minutes.
 
-I has SAAS subscription model.
+It has SAAS subscription model.
 
 I was responsible for the development both front end and back end and managing a team of developers.
 
