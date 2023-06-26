@@ -39,8 +39,8 @@ const Layout = ({ location, children, type }) => {
           <span>{author?.name}</span>
         </Link>
         <Link className={styles.menuItem} to="/about">about</Link>
-        <Link className={styles.menuItem} to="/work">works</Link>
-        <Link className={`${styles.menuItem} hidden-xs`} to="/contact">contact</Link>
+        <Link className={`${styles.menuItem} hidden-xs`} to="/work">works</Link>
+        {/* <Link className={`${styles.menuItem} hidden-xs`} to="/contact">contact</Link> */}
         <a className={styles.social} aria-label="Twitter" href={`https://twitter.com/${social?.twitter || ``}`}> </a>
       </nav>
     </div>
