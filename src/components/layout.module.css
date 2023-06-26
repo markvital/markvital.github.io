@@ -57,7 +57,23 @@
     fill: green;
 }
 
+/** sticky footer **/
+.globalWrapper{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.content header {
+    margin-bottom: 5px;
+}
+
 .footer {
+    flex-shrink: 0;
     padding: 40px 20px 10px;
     color: #9f9c9d;
 }

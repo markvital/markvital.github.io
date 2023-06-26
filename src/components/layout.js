@@ -54,9 +54,11 @@ const Layout = ({ location, children, type }) => {
 */
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main className={type === "full" ? styles.pageFull : styles.pageColumn}>{children}</main>
+    <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
+      <div className={styles.content}>
+        <header className="global-header">{header}</header>
+        <main className={type === "full" ? styles.pageFull : styles.pageColumn}>{children}</main>
+      </div>
       <footer className={styles.footer}>
         {author?.name} © {new Date().getFullYear()}
       </footer>
