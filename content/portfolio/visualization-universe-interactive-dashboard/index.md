@@ -6,11 +6,10 @@ coverImage: ./thumb/cover.jpg
 thumbImage: ./thumb/thumb.jpg
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
-## Lorem ipsum dolor sit amet
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Together with a team I developed a dashboard that shows the most popular types of charts using Google Trends API.
+The the dashboard app connects to the Google Trends through API and refreshes the data daily. It’s implemented as a static site generator on Python.
+The frontend is building on React.js. I used D3.js to build the charts.
+On the backend the data was cleaned and aggregated using Python.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OyE_0miJ-4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

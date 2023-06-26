@@ -25,13 +25,10 @@ items:
     image:  charts-groups.png
 ---
 
-What is the minimum number of shapes that make a person or an object recognizable?
+Together with my partner I build the extensive catalogue of graphs and charts, which supports content collaborators.
+The catalogue is implemented as a static website generator. The collaborators could edit each article in Markdown and submit changes through the  Github.  The website is build on Gatsby.js and React.js.
 
-## Lorem ipsum dolor sit amet
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The homepage has grid, list and groups view, displaying all the charts with separate controls for switching between the views and sorting. The articles are linking between each other with complex relationship using system of tags and properties, described in Markdown YAML.
 
 
 **Tech**: Gatsby.js, React.js, Markdown, YAML, Algolia Doc Search, Github
