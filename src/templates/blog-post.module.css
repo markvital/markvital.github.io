@@ -89,9 +89,26 @@
     }
 }
 
+@media screen and (min-width: 800px)  {
+    .cover {
+        max-width: 800px;
+        margin: 0 -75px;
+    }
+
+    .title h1{
+        padding: 0 10px;
+    }
+}
+
 @media screen and (min-width: 950px)  {
     .cover {
         max-width: 950px;
         margin: 0 -150px;
+    }
+}
+
+@media screen and (max-width: 800px)  {
+    .title h1{
+        font-size: 2em;
     }
 }
