@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 import { PortfolioGrid } from "../components/portfolio-grid"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Anna Vital's website`
+  const siteTitle = data.site.siteMetadata?.title || `Mark Vital's website`
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
@@ -27,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} type="full">
-      <Seo title="All posts" />
+      <Seo title="Portfolio" />
       <Bio />
       <p className={styles.subHeadline}>Portfolio</p>
       <PortfolioGrid posts={posts} />

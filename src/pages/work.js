@@ -12,8 +12,8 @@ const WorkPage = ({ data, location }) => {
   return (
     <Layout location={location} type={"full"}>
       <Seo
-        title="Anna Vital works"
-        description="Most important works of Anna Vital"
+        title="My Works"
+        description="Most important works of Mark Vital"
       />
       <p style={{textAlign:"center", color:"grey", fontSize: "1.25em"}}>
         Here is my portfolio:

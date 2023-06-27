@@ -9,7 +9,7 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Seo
-        title="About Mark Vital"
+        title="About Me"
         description="Mark Vital is an information designer and programmer."
       />
         <article>
