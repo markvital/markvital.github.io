@@ -26,3 +26,33 @@ body {
 a {
   color: inherit;
 }
+
+.prose-markdown a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.prose-markdown a:hover {
+  color: #2c2060;
+}
+
+.prose-markdown a:active {
+  color: #6057a3;
+}
+
+.prose-markdown a:visited {
+  color: #9393a5;
+}
+
+.prose-markdown img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose-markdown iframe {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 1.5rem auto;
+  aspect-ratio: 16 / 9;
+}

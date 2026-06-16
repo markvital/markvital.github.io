@@ -7,7 +7,9 @@
   "homepage": "https://markvital.github.io/",
   "license": "0BSD",
   "scripts": {
+    "predev": "node scripts/sync-content-assets.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/sync-content-assets.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -18,7 +20,9 @@
     "@tailwindcss/postcss": "latest",
     "class-variance-authority": "latest",
     "clsx": "latest",
+    "gray-matter": "^4.0.3",
     "lucide-react": "latest",
+    "markdown-it": "^14.2.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -26,6 +30,7 @@
     "tailwindcss": "latest"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
