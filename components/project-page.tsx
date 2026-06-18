@@ -6,17 +6,9 @@ type ProjectPageProps = {
   project: PortfolioProject
   previous?: PortfolioProject
   next?: PortfolioProject
-  backHref?: string
-  backTitle?: string
 }
 
-export function ProjectPage({
-  project,
-  previous,
-  next,
-  backHref,
-  backTitle,
-}: ProjectPageProps) {
+export function ProjectPage({ project, previous, next }: ProjectPageProps) {
   return (
     <>
       {project.coverImage ? (
@@ -33,18 +25,6 @@ export function ProjectPage({
       ) : null}
 
       <article itemScope itemType="http://schema.org/Article">
-        {backHref ? (
-          <div className="relative left-1/2 w-screen -translate-x-1/2 pb-3 pl-5">
-            <Link
-              className="text-[#a095af] no-underline hover:text-[#2C2060]"
-              href={backHref}
-              title={backTitle}
-            >
-              ◀ Back to {backTitle}
-            </Link>
-          </div>
-        ) : null}
-
         <header className="relative left-1/2 mt-10 mb-8 w-screen -translate-x-1/2 text-center">
           <h1 className="px-3 text-4xl font-bold max-md:text-3xl" itemProp="headline">
             {project.title}
@@ -65,7 +45,7 @@ export function ProjectPage({
                 <li className="m-0" key={child.slug}>
                   <Link
                     className="text-[var(--accent)] no-underline hover:text-[#2C2060]"
-                    href={`/${child.slug}/`}
+                    href={`/${child.urlSlug}/`}
                     title={child.title}
                   >
                     <figure className="m-0">
@@ -92,14 +72,18 @@ export function ProjectPage({
         <ul className="flex list-none flex-wrap justify-between p-0">
           <li>
             {previous ? (
-              <Link href={`/${previous.slug}/`} rel="prev" title={previous.title}>
+              <Link
+                href={`/${previous.urlSlug}/`}
+                rel="prev"
+                title={previous.title}
+              >
                 previous
               </Link>
             ) : null}
           </li>
           <li>
             {next ? (
-              <Link href={`/${next.slug}/`} rel="next" title={next.title}>
+              <Link href={`/${next.urlSlug}/`} rel="next" title={next.title}>
                 next
               </Link>
             ) : null}

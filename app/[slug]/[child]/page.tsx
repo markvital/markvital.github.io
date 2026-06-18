@@ -3,14 +3,14 @@ import { notFound } from "next/navigation"
 import { ProjectPage as ProjectPageView } from "@/components/project-page"
 import { SiteShell } from "@/components/site-shell"
 import {
+  getChildProjectParams,
   getProjectBySlug,
   getProjectNeighbors,
-  getChildProjectParams,
   projectExists,
 } from "@/lib/portfolio"
 
 export function generateStaticParams() {
-  return getChildProjectParams()
+  return getChildProjectParams().map(({ slug, child }) => ({ slug, child }))
 }
 
 export async function generateMetadata({
@@ -19,16 +19,17 @@ export async function generateMetadata({
   params: Promise<{ slug: string; child: string }>
 }): Promise<Metadata> {
   const { slug, child } = await params
-  if (!projectExists(`${slug}/items/${child}`)) {
+  const contentSlug = `${slug}/items/${child}`
+  if (!projectExists(contentSlug)) {
     notFound()
   }
-  const project = getProjectBySlug(`${slug}/items/${child}`)
+  const project = getProjectBySlug(contentSlug)
 
   return {
     title: project.title,
     description: project.description,
     alternates: {
-      canonical: `/${project.slug}/`,
+      canonical: `/${project.urlSlug}/`,
     },
   }
 }
@@ -39,26 +40,16 @@ export default async function ChildProjectPage({
   params: Promise<{ slug: string; child: string }>
 }) {
   const { slug, child } = await params
-  if (!projectExists(`${slug}/items/${child}`)) {
+  const contentSlug = `${slug}/items/${child}`
+  if (!projectExists(contentSlug)) {
     notFound()
   }
-  const project = getProjectBySlug(`${slug}/items/${child}`)
+  const project = getProjectBySlug(contentSlug)
   const { previous, next } = getProjectNeighbors(project.slug)
-  const parent = getProjectBySlug(slug)
-
-  if (!project) {
-    notFound()
-  }
 
   return (
     <SiteShell>
-      <ProjectPageView
-        project={project}
-        previous={previous}
-        next={next}
-        backHref={`/${slug}/#items`}
-        backTitle={parent.title}
-      />
+      <ProjectPageView project={project} previous={previous} next={next} />
     </SiteShell>
   )
 }

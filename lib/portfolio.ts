@@ -7,6 +7,7 @@ const portfolioDir = path.join(process.cwd(), "content", "portfolio")
 
 export type PortfolioProject = {
   slug: string
+  urlSlug: string
   title: string
   date: string
   description: string
@@ -84,6 +85,10 @@ function publicAssetUrl(projectPath: string, source?: string) {
   return `/portfolio/${projectPath}/${stripDotSlash(source)}`
 }
 
+export function projectUrlPath(slug: string) {
+  return slug.replace(/\/items\//g, "/")
+}
+
 function excerptFromMarkdown(body: string) {
   return body
     .replace(/```[\s\S]*?```/g, "")
@@ -148,6 +153,7 @@ export function getProjectBySlug(slug: string): PortfolioProject {
 
   return {
     slug,
+    urlSlug: projectUrlPath(slug),
     title: frontmatter.title ?? slug,
     date: frontmatter.date ? new Date(frontmatter.date).toISOString() : "",
     description: frontmatter.description ?? excerptFromMarkdown(content),
