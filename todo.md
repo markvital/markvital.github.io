@@ -33,7 +33,7 @@
 
 ## Step 5: Agent Support
 
-- [ ] Add `AGENTS.md` with project conventions, commands, content rules, deployment notes, and audit expectations.
+- [x] Add `AGENTS.md` with project conventions, commands, content rules, deployment notes, and audit expectations.
 
 ## Step 6: Audit and Fix Pass
 
@@ -42,4 +42,3 @@
 - [ ] Run Lighthouse audit.
 - [ ] Fix performance, UI, accessibility, and SEO regressions found during migration.
 - [ ] Capture final screenshots and summarize scores.
-
