@@ -11,6 +11,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/sync-content-assets.mjs",
     "build": "next build",
+    "preview": "python3 -m http.server 8001 --bind 127.0.0.1 --directory out",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\""

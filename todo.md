@@ -37,8 +37,15 @@
 
 ## Step 6: Audit and Fix Pass
 
-- [ ] Run production build.
-- [ ] Run local preview.
+- [x] Run production build.
+- [x] Run local preview.
 - [ ] Run Lighthouse audit.
 - [ ] Fix performance, UI, accessibility, and SEO regressions found during migration.
 - [ ] Capture final screenshots and summarize scores.
+
+## Step 7: Multi-item Projects
+
+- [x] Move multi-item projects from `index.md` frontmatter into per-item folders.
+- [x] Render parent projects with child project grids from `items/`.
+- [x] Render child projects with the same cover/title/description layout as parents.
+- [x] Capture screenshots for updated parent and child project pages.

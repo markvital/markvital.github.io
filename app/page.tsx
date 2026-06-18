@@ -1,10 +1,10 @@
 import { Bio } from "@/components/bio"
 import { PortfolioGrid } from "@/components/portfolio-grid"
 import { SiteShell } from "@/components/site-shell"
-import { getAllProjects } from "@/lib/portfolio"
+import { getTopLevelProjects } from "@/lib/portfolio"
 
 export default function Home() {
-  const projects = getAllProjects()
+  const projects = getTopLevelProjects()
 
   return (
     <SiteShell full>

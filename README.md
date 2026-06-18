@@ -29,7 +29,7 @@ yarn build
 Serve the exported output locally:
 
 ```sh
-python3 -m http.server 8001 --bind 127.0.0.1 --directory out
+yarn preview
 ```
 
 Open `http://127.0.0.1:8001`.

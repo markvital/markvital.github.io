@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { PortfolioGrid } from "@/components/portfolio-grid"
 import { SiteShell } from "@/components/site-shell"
-import { getAllProjects } from "@/lib/portfolio"
+import { getTopLevelProjects } from "@/lib/portfolio"
 
 export const metadata: Metadata = {
   title: "My Works",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function WorkPage() {
-  const projects = getAllProjects()
+  const projects = getTopLevelProjects()
 
   return (
     <SiteShell full>

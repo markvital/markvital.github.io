@@ -4,25 +4,6 @@ date: "2018-08-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 coverImage: ./thumb/cover.jpg
 thumbImage: ./thumb/thumb.jpg
-
-items:
-  - title:  Charts Article Layout
-    image:  article-layout.png
-    
-  - title:  Charts List View
-    image:  charts-list.png
-    
-  - title:  Charts Examples
-    image:  chart-examples.png
-
-  - title:  Catalogue Search
-    image:  charts-search.png
-    
-  - title:  Edit Chart Article
-    image:  edit-chart.png
-
-  - title:  Charts Groups View
-    image:  charts-groups.png
 ---
 
 Together with my partner I build the extensive catalogue of graphs and charts, which supports content collaborators.
@@ -38,5 +19,4 @@ The homepage has grid, list and groups view, displaying all the charts with sepa
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pqia9PjWy2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 
