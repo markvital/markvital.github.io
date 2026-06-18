@@ -10,7 +10,7 @@ export default function Home() {
     <SiteShell full>
       <Bio />
       <p className="mb-10 mt-11 text-center text-xl text-neutral-400">
-        Portfolio
+        Recent works
       </p>
       <PortfolioGrid projects={projects} />
     </SiteShell>
