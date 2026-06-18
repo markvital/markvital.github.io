@@ -59,7 +59,7 @@ export default async function ProjectPage({
       ) : null}
 
       <article itemScope itemType="http://schema.org/Article">
-        <header className="relative left-1/2 w-screen -translate-x-1/2 text-center">
+        <header className="relative left-1/2 mt-10 mb-8 w-screen -translate-x-1/2 text-center">
           <h1
             className="px-3 text-4xl font-bold max-md:text-3xl"
             itemProp="headline"
@@ -69,7 +69,7 @@ export default async function ProjectPage({
         </header>
 
         <section
-          className="prose-markdown"
+          className="prose-markdown mt-0"
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: project.html }}
         />
@@ -77,7 +77,7 @@ export default async function ProjectPage({
         {project.items.length > 0 ? (
           <section className="mt-12 clear-both" id="items">
             <h2>Project items</h2>
-            <ul className="mx-0 mt-8 grid list-none justify-center gap-10 p-0 [grid-template-columns:repeat(auto-fill,300px)] lg:-mx-[175px]">
+            <ul className="relative left-1/2 mt-8 grid w-[min(calc(100vw-2rem),980px)] -translate-x-1/2 list-none justify-center gap-10 p-0 [grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),300px))]">
               {project.items.map(item => (
                 <li className="m-0" key={item.slug}>
                   <Link

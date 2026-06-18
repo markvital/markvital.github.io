@@ -19,11 +19,11 @@
 
 ## Step 3: UI Parity Pass
 
-- [ ] Rebuild layout, navigation, bio, portfolio grid, about, work, contact, project, and project item views.
-- [ ] Translate existing theme styling to Tailwind CSS.
-- [ ] Use shadcn/ui primitives where they add value without changing the site's structure.
-- [ ] Fix known UI issues: mobile grid behavior, contrast, spacing, and invalid nested paragraphs.
-- [ ] Capture desktop and mobile screenshots.
+- [x] Rebuild layout, navigation, bio, portfolio grid, about, work, contact, project, and project item views.
+- [x] Translate existing theme styling to Tailwind CSS.
+- [x] Use shadcn/ui primitives where they add value without changing the site's structure.
+- [x] Fix known UI issues: mobile grid behavior, contrast, spacing, and invalid nested paragraphs.
+- [x] Capture desktop and mobile screenshots.
 
 ## Step 4: GitHub Pages Deployment
 

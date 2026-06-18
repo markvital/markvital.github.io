@@ -51,7 +51,7 @@ export default async function ProjectItemPage({
             href={`/${match.project.slug}/#items`}
             title={`Back to ${match.project.title}`}
           >
-            Back to {match.project.title}
+            ◀ Back to {match.project.title}
           </Link>
         </div>
 

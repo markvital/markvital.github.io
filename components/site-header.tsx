@@ -7,7 +7,7 @@ import { site } from "@/lib/site"
 export function SiteHeader() {
   return (
     <header className="border-b border-neutral-200 bg-white shadow-sm">
-      <nav className="flex items-center px-5 py-1 text-sm font-bold text-neutral-500">
+      <nav className="flex items-center px-5 py-1 text-base font-normal text-[#9f9c9d]">
         <Link className="flex items-center gap-3 px-0 py-2 sm:px-3" href="/">
           <Image
             src={profilePic}
@@ -29,7 +29,7 @@ export function SiteHeader() {
           works
         </Link>
         <a
-          className="ml-auto px-3 py-3 text-neutral-500 hover:text-neutral-400"
+          className="ml-auto px-3 py-3 text-[#9f9c9d] hover:text-neutral-400"
           href={`https://twitter.com/${site.author.twitter}`}
           aria-label="Twitter"
         >
