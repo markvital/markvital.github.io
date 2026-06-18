@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { SiteShell } from "@/components/site-shell"
-import aboutCover from "@/legacy-gatsby/src/images/about-cover.jpg"
+import aboutCover from "@/assets/about-cover.jpg"
 
 export const metadata: Metadata = {
   title: "About Me",

@@ -1,55 +1,63 @@
+# Mark Vital Portfolio
 
-# 🚀 Quick start
+Personal portfolio website built with Next.js, TypeScript, Tailwind CSS, shadcn/ui conventions, and Markdown content.
 
-This is personal portfolio website build on markdown and Gatsby static site generator. To edit localy you can use IDE/editor, github and Gatsby CLI console tools.
+## Start Developing
 
-## Start developing
-
-To start the website locally, run:
+Install dependencies:
 
 ```sh
-gatsby develop
+yarn install
 ```
 
-To test production build localy run ```gatsby build``` and then ```gatsby serve```
+Run the local dev server:
 
-** Open the source code and start editing!**
-
-Your site is now running at `http://localhost:8000`!
-
-_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-Save your changes and the browser will update in real time!
-    
-## Edit site content
-
-To edit project content change markdown files in ```content/portfolio``` folder. Each project post have thumbnail and cover in ```/thumb``` folder.
-For cover and thumbnail to display correctly, each markdown file should have these 2 lines in frontmatter (do not change them):
+```sh
+yarn dev
 ```
-title: My Project
-...
-coverImage: ./thumb/cover.jpeg
-thumbImage: ./thumb/thumb.jpeg
+
+Open `http://localhost:3000`.
+
+## Test Production Export
+
+Build the static site:
+
+```sh
+yarn build
+```
+
+Serve the exported output locally:
+
+```sh
+python3 -m http.server 8001 --bind 127.0.0.1 --directory out
+```
+
+Open `http://127.0.0.1:8001`.
+
+## Edit Site Content
+
+Portfolio projects live in `content/portfolio`. Each project has an `index.md` file and optional image assets in the same folder.
+
+Each project frontmatter should keep the existing thumbnail and cover fields:
+
+```md
 ---
-Article text is here...
+title: My Project
+coverImage: ./thumb/cover.jpg
+thumbImage: ./thumb/thumb.jpg
+---
 ```
-To change other pages of website (like */about* page) , carefully edit *.js* files in ```src/pages```.
-Each file is a React component of correspondent page.
-        
-## Deploy latest changes
 
-To deploy latest changes to staging, run:
-```sh
-npm run deploy
-```
-Currently our website is hosted on [GitHub Pages](https://pages.github.com/). 
-Deploy script will build the project and commit it to [gh-pages](https://github.com/Adioma/infographopedia/tree/gh-pages) branch in our repository.
+Project item pages are generated from the optional `items` frontmatter list. Images referenced by markdown and frontmatter are copied into `public/portfolio` during `yarn dev` and `yarn build`.
 
-## New to all this?
+Static pages such as About, Contact, and 404 live in `app/`.
 
-Full documentation for Gatsby lives [on their website](https://www.gatsbyjs.org/).
+## Deploy
 
-We use Markdown. Read [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet).
+The site is hosted on GitHub Pages. Deployment is handled by the GitHub Actions workflow once it is added in the deployment step.
 
+## Notes
 
-The website theme is derived from [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+We use Markdown for project content. Read the [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet) for syntax help.
+
+The original visual theme was derived from `gatsby-starter-blog`; the Gatsby implementation has been removed.

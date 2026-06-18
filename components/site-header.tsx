@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
-import profilePic from "@/legacy-gatsby/src/images/profile-pic.png"
+import profilePic from "@/assets/profile-pic.png"
 import { site } from "@/lib/site"
 
 export function SiteHeader() {

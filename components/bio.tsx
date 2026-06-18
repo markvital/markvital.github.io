@@ -1,5 +1,5 @@
 import Image from "next/image"
-import profilePic from "@/legacy-gatsby/src/images/profile-pic.png"
+import profilePic from "@/assets/profile-pic.png"
 import { site } from "@/lib/site"
 
 export function Bio() {
