@@ -27,9 +27,9 @@
 
 ## Step 4: GitHub Pages Deployment
 
-- [ ] Add GitHub Actions workflow with `workflow_dispatch` for on-demand deployment.
-- [ ] Configure static export output for GitHub Pages.
-- [ ] Verify deployment artifact generation locally.
+- [x] Add GitHub Actions workflow with `workflow_dispatch` for on-demand deployment.
+- [x] Configure static export output for GitHub Pages.
+- [x] Verify deployment artifact generation locally.
 
 ## Step 5: Agent Support
 
@@ -42,3 +42,4 @@
 - [ ] Run Lighthouse audit.
 - [ ] Fix performance, UI, accessibility, and SEO regressions found during migration.
 - [ ] Capture final screenshots and summarize scores.
+
