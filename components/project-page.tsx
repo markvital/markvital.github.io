@@ -77,6 +77,13 @@ export function ProjectPage({
       </article>
 
       <nav className="mt-8 border-t border-neutral-200 pt-5">
+        {parentHref ? (
+          <div className="mb-6 text-center">
+            <Link className="whitespace-nowrap" href={parentHref} title={parentTitle}>
+              Back to {parentTitle}
+            </Link>
+          </div>
+        ) : null}
         <ul className="grid list-none grid-cols-3 items-center p-0">
           <li className="justify-self-start">
             {previous ? (
@@ -89,13 +96,7 @@ export function ProjectPage({
               </Link>
             ) : null}
           </li>
-          <li className="justify-self-center text-center">
-            {parentHref ? (
-              <Link href={parentHref} title={parentTitle}>
-                Back to {parentTitle}
-              </Link>
-            ) : null}
-          </li>
+          <li />
           <li className="justify-self-end">
             {next ? (
               <Link href={`/${next.urlSlug}/`} rel="next" title={next.title}>
