@@ -46,10 +46,17 @@ export default async function ChildProjectPage({
   }
   const project = getProjectBySlug(contentSlug)
   const { previous, next } = getProjectNeighbors(project.slug)
+  const parent = getProjectBySlug(slug)
 
   return (
     <SiteShell>
-      <ProjectPageView project={project} previous={previous} next={next} />
+      <ProjectPageView
+        project={project}
+        previous={previous}
+        next={next}
+        parentHref={`/${parent.urlSlug}/`}
+        parentTitle={parent.title}
+      />
     </SiteShell>
   )
 }

@@ -6,9 +6,17 @@ type ProjectPageProps = {
   project: PortfolioProject
   previous?: PortfolioProject
   next?: PortfolioProject
+  parentHref?: string
+  parentTitle?: string
 }
 
-export function ProjectPage({ project, previous, next }: ProjectPageProps) {
+export function ProjectPage({
+  project,
+  previous,
+  next,
+  parentHref,
+  parentTitle,
+}: ProjectPageProps) {
   return (
     <>
       {project.coverImage ? (
@@ -69,8 +77,8 @@ export function ProjectPage({ project, previous, next }: ProjectPageProps) {
       </article>
 
       <nav className="mt-8 border-t border-neutral-200 pt-5">
-        <ul className="flex list-none flex-wrap justify-between p-0">
-          <li>
+        <ul className="grid list-none grid-cols-3 items-center p-0">
+          <li className="justify-self-start">
             {previous ? (
               <Link
                 href={`/${previous.urlSlug}/`}
@@ -81,7 +89,14 @@ export function ProjectPage({ project, previous, next }: ProjectPageProps) {
               </Link>
             ) : null}
           </li>
-          <li>
+          <li className="justify-self-center text-center">
+            {parentHref ? (
+              <Link href={parentHref} title={parentTitle}>
+                Back to {parentTitle}
+              </Link>
+            ) : null}
+          </li>
+          <li className="justify-self-end">
             {next ? (
               <Link href={`/${next.urlSlug}/`} rel="next" title={next.title}>
                 next
