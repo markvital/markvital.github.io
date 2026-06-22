@@ -2,10 +2,11 @@ import type { Metadata } from "next"
 import { PortfolioGrid } from "@/components/portfolio-grid"
 import { SiteShell } from "@/components/site-shell"
 import { getTopLevelProjects } from "@/lib/portfolio"
+import { site } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "My Works",
-  description: "Most important works of Mark Vital",
+  description: `Most important works of ${site.profile.name}`,
 }
 
 export default function WorkPage() {

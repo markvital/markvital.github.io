@@ -1,5 +1,4 @@
 import Image from "next/image"
-import profilePic from "@/assets/profile-pic.png"
 import { site } from "@/lib/site"
 
 export function Bio() {
@@ -7,8 +6,8 @@ export function Bio() {
     <section className="mx-auto mt-7 flex max-w-[725px] items-center gap-5 text-xl max-sm:text-lg">
       <aside className="shrink-0">
         <Image
-          src={profilePic}
-          alt={site.author.name}
+          src={site.profile.avatar}
+          alt={site.profile.name}
           width={125}
           height={125}
           className="h-[125px] w-[125px]"
@@ -16,10 +15,8 @@ export function Bio() {
         />
       </aside>
       <div>
-        <p className="m-0 text-xl max-sm:text-lg">
-          Developing Software From Web2 to Web3
-        </p>
-        <p>{site.author.summary}</p>
+        <p className="m-0 text-xl max-sm:text-lg">{site.profile.bioTitle}</p>
+        <p>{site.profile.bioSummary}</p>
       </div>
     </section>
   )

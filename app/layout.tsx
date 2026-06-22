@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://markvital.github.io'),
+  metadataBase: new URL(site.metadataBase),
   title: {
-    default: 'Mark Vital - software developer and information designer',
-    template: '%s | Mark Vital - software developer and information designer',
+    default: site.title,
+    template: `%s | ${site.title}`,
   },
-  description: 'Mark Vital, software developer and information designer.',
+  description: site.description,
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ export function SiteShell({
         {children}
       </main>
       <footer className="shrink-0 px-5 pb-3 pt-10 text-neutral-500">
-        {site.author.name} © {new Date().getFullYear()}
+        {site.copyrightName} © {new Date().getFullYear()}
       </footer>
     </div>
   )
