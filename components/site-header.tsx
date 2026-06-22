@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ExternalLink } from "lucide-react"
 import profilePic from "@/assets/profile-pic.png"
 import { site } from "@/lib/site"
 
@@ -19,22 +18,18 @@ export function SiteHeader() {
           />
           <span>{site.author.name}</span>
         </Link>
-        <Link className="px-5 py-3 hover:text-neutral-400" href="/about/">
+        <Link
+          className="ml-auto rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800"
+          href="/about/"
+        >
           about
         </Link>
         <Link
-          className="hidden px-5 py-3 hover:text-neutral-400 sm:inline"
+          className="hidden rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800 sm:inline"
           href="/work/"
         >
           works
         </Link>
-        <a
-          className="ml-auto px-3 py-3 text-[#9f9c9d] hover:text-neutral-400"
-          href={`https://twitter.com/${site.author.twitter}`}
-          aria-label="Twitter"
-        >
-          <ExternalLink size={22} aria-hidden="true" />
-        </a>
       </nav>
     </header>
   )
