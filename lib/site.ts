@@ -1,35 +1,37 @@
-import aboutCover from "@/assets/about-cover.jpg"
-import profilePic from "@/assets/profile-pic.png"
+import fs from "node:fs"
+import path from "node:path"
 
-export const site = {
-  metadataBase: "https://markvital.github.io",
-  title: "Mark Vital - software developer and information designer",
-  description: "Mark Vital, software developer and information designer.",
-  copyrightName: "Mark Vital",
+export type SiteConfig = {
+  metadataBase: string
+  title: string
+  description: string
+  copyrightName: string
   profile: {
-    name: "Mark Vital",
-    avatar: profilePic,
-    bioTitle: "Developing Software From Web2 to Web3",
-    bioSummary:
-      "A web developer and information designer who lives in crypto universe and builds things with code.",
+    name: string
+    avatar: string
+    bioTitle: string
+    bioSummary: string
     about: {
-      title: "About Me",
-      description: "Mark Vital is an information designer and programmer.",
-      paragraphs: [
-        "I&apos;m a full stack developer with an eye for user interfaces and a sense of usability. I have worked in large corporations for half of my career and in a startups later on. I feel like I have now combined both the professionalism of working on advanced products with the hacker mindset of a startup. I lean towards using open-sources frameworks and tools to achieve fast results.",
-        "Besides the software development my passion is an information design. Together with <a class=\"text-[var(--accent)]\" href=\"http://twitter.com/annavitals\">@annavital</a> we created multiple <a class=\"text-[var(--accent)]\" href=\"https://blog.adioma.com\">infographics</a> and a data visualization tool.",
-      ],
-      cover: aboutCover,
-      coverAlt: "Mark Vital",
-    },
+      title: string
+      description: string
+      paragraphs: string[]
+      cover: string
+      coverAlt: string
+    }
     contact: {
-      title: "Contact Me",
-      description: "Please submit additional details to contact Mark Vital.",
-      intro: "Please fill out the form below to contact me.",
-    },
-  },
+      title: string
+      description: string
+      intro: string
+    }
+  }
   nav: {
-    about: "about",
-    works: "works",
-  },
-} as const
+    about: string
+    works: string
+  }
+}
+
+const sitePath = path.join(process.cwd(), "content", "site.json")
+
+export const site = JSON.parse(
+  fs.readFileSync(sitePath, "utf8"),
+) as SiteConfig
