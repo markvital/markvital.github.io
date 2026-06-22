@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/site-header"
-import { site } from "@/lib/site"
+import { SiteFooter } from "@/components/site-footer"
 
 export function SiteShell({
   children,
@@ -16,9 +16,7 @@ export function SiteShell({
       >
         {children}
       </main>
-      <footer className="shrink-0 px-5 pb-3 pt-10 text-neutral-500">
-        {site.copyrightName} © {new Date().getFullYear()}
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

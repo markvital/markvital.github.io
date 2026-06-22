@@ -3,6 +3,28 @@
   "title": "Mark Vital - software developer and information designer",
   "description": "Mark Vital, software developer and information designer.",
   "copyrightName": "Mark Vital",
+  "socialLinks": [
+    {
+      "label": "X",
+      "href": "https://x.com/markvitals"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/markvital/"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/markvital"
+    },
+    {
+      "label": "Behance",
+      "href": "https://www.behance.net/markvital"
+    },
+    {
+      "label": "Stack Overflow",
+      "href": "https://stackoverflow.com/users/15894/mark-vital"
+    }
+  ],
   "profile": {
     "name": "Mark Vital",
     "avatar": "/profile-pic.png",

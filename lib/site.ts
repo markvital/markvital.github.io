@@ -6,6 +6,11 @@ export type SiteConfig = {
   title: string
   description: string
   copyrightName: string
+  socialLinks: Array<{
+    label: string
+    href: string
+    icon?: "twitter" | "linkedin" | "github" | "stackoverflow" | "external"
+  }>
   profile: {
     name: string
     avatar: string
