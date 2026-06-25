@@ -8,7 +8,7 @@ export function SiteHeader() {
       <nav className="flex items-center px-5 py-1 text-base font-normal text-[#9f9c9d]">
         <Link className="flex items-center gap-3 px-0 py-2 sm:px-3" href="/">
           <Image
-            src={site.profile.avatar}
+            src={site.profile.logo}
             alt={site.profile.name}
             width={35}
             height={35}

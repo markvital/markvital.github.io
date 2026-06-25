@@ -16,6 +16,8 @@ export type PortfolioProject = {
   html: string
   coverImage?: string
   thumbImage?: string
+  coverBlurDataURL?: string
+  thumbBlurDataURL?: string
   order?: number
   children: PortfolioProject[]
   parentSlug?: string
@@ -35,6 +37,13 @@ const markdown = new MarkdownIt({
   linkify: true,
   typographer: true,
 })
+
+type BlurManifest = Record<string, string>
+
+const blurManifestPath = path.join(process.cwd(), "public", "image-blur-manifest.json")
+const blurManifest: BlurManifest = fs.existsSync(blurManifestPath)
+  ? (JSON.parse(fs.readFileSync(blurManifestPath, "utf8")) as BlurManifest)
+  : {}
 
 function isVisibleDirectory(entry: fs.Dirent) {
   return entry.isDirectory() && !entry.name.startsWith(".")
@@ -83,6 +92,14 @@ function publicAssetUrl(projectPath: string, source?: string) {
   }
 
   return `/portfolio/${projectPath}/${stripDotSlash(source)}`
+}
+
+function blurDataUrl(publicUrl?: string) {
+  if (!publicUrl) {
+    return undefined
+  }
+
+  return blurManifest[publicUrl]
 }
 
 export function projectUrlPath(slug: string) {
@@ -150,6 +167,8 @@ export function getProjectBySlug(slug: string): PortfolioProject {
   const { content, data } = matter(file)
   const frontmatter = data as RawFrontmatter
   const children = listDirectChildProjectPaths(slug).map(getProjectBySlug)
+  const coverImage = publicAssetUrl(slug, frontmatter.coverImage)
+  const thumbImage = publicAssetUrl(slug, frontmatter.thumbImage)
 
   return {
     slug,
@@ -160,8 +179,10 @@ export function getProjectBySlug(slug: string): PortfolioProject {
     excerpt: excerptFromMarkdown(content),
     body: content,
     html: renderMarkdown(slug, content),
-    coverImage: publicAssetUrl(slug, frontmatter.coverImage),
-    thumbImage: publicAssetUrl(slug, frontmatter.thumbImage),
+    coverImage,
+    thumbImage,
+    coverBlurDataURL: blurDataUrl(coverImage),
+    thumbBlurDataURL: blurDataUrl(thumbImage),
     order: frontmatter.order,
     children: sortProjects(children),
     parentSlug: slug.includes("/items/") ? slug.split("/items/")[0] : undefined,

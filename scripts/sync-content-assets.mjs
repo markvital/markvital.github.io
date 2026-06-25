@@ -1,11 +1,13 @@
 import fs from "node:fs"
 import path from "node:path"
+import sharp from "sharp"
 
 const root = process.cwd()
 const sourceDir = path.join(root, "content", "portfolio")
 const staticDir = path.join(root, "static")
 const publicDir = path.join(root, "public")
 const outDir = path.join(root, "out")
+const blurManifestPath = path.join(publicDir, "image-blur-manifest.json")
 const targetDir = path.join(publicDir, "portfolio")
 const assetExtensions = new Set([
   ".gif",
@@ -18,9 +20,22 @@ const assetExtensions = new Set([
   ".pdf",
 ])
 
-function copyFiles(fromDir, toDir, filter = () => true) {
+async function createBlurDataUrl(filePath) {
+  try {
+    const buffer = await sharp(filePath)
+      .resize(32, 32, { fit: "cover" })
+      .jpeg({ quality: 45, mozjpeg: true })
+      .toBuffer()
+
+    return `data:image/jpeg;base64,${buffer.toString("base64")}`
+  } catch {
+    return undefined
+  }
+}
+
+async function copyFiles(fromDir, toDir, filter = () => true, manifest = {}) {
   if (!fs.existsSync(fromDir)) {
-    return
+    return manifest
   }
 
   for (const entry of fs.readdirSync(fromDir, { withFileTypes: true })) {
@@ -32,7 +47,7 @@ function copyFiles(fromDir, toDir, filter = () => true) {
     const toPath = path.join(toDir, entry.name)
 
     if (entry.isDirectory()) {
-      copyFiles(fromPath, toPath, filter)
+      await copyFiles(fromPath, toPath, filter, manifest)
       continue
     }
 
@@ -42,12 +57,26 @@ function copyFiles(fromDir, toDir, filter = () => true) {
 
     fs.mkdirSync(path.dirname(toPath), { recursive: true })
     fs.copyFileSync(fromPath, toPath)
+
+    const ext = path.extname(fromPath).toLowerCase()
+    if (assetExtensions.has(ext)) {
+      const publicPath = `/${path.relative(publicDir, toPath).split(path.sep).join("/")}`
+      const blurDataURL = await createBlurDataUrl(fromPath)
+
+      if (blurDataURL) {
+        manifest[publicPath] = blurDataURL
+      }
+    }
   }
+
+  return manifest
 }
 
 fs.rmSync(publicDir, { recursive: true, force: true })
 fs.rmSync(outDir, { recursive: true, force: true })
-copyFiles(staticDir, publicDir)
-copyFiles(sourceDir, targetDir, filePath =>
+const blurManifest = await copyFiles(staticDir, publicDir)
+await copyFiles(sourceDir, targetDir, filePath =>
   assetExtensions.has(path.extname(filePath).toLowerCase()),
+  blurManifest,
 )
+fs.writeFileSync(blurManifestPath, JSON.stringify(blurManifest, null, 2))

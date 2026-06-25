@@ -20,6 +20,8 @@ export function PortfolioGrid({
               alt=""
               width={350}
               height={350}
+              placeholder={project.thumbBlurDataURL ? "blur" : "empty"}
+              blurDataURL={project.thumbBlurDataURL}
               className="aspect-square w-full rounded-[5px] border-2 border-neutral-300 object-cover saturate-[25%] transition group-hover:saturate-100"
             />
           ) : (

@@ -3,11 +3,11 @@ import { site } from "@/lib/site"
 export function SiteFooter() {
   return (
     <footer className="shrink-0 px-5 pb-3 pt-10 text-neutral-500">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
         <div>
           {site.copyrightName} © {new Date().getFullYear()}
         </div>
-        <ul className="flex flex-wrap items-center gap-2">
+        <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:justify-end">
           {site.socialLinks.map(link => (
             <li key={link.href}>
               <a

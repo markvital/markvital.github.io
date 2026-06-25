@@ -26,6 +26,8 @@ export function ProjectPage({
             alt=""
             width={950}
             height={500}
+            placeholder={project.coverBlurDataURL ? "blur" : "empty"}
+            blurDataURL={project.coverBlurDataURL}
             className="h-auto w-full"
             priority
           />
@@ -62,6 +64,14 @@ export function ProjectPage({
                         alt=""
                         width={300}
                         height={300}
+                        placeholder={
+                          child.thumbBlurDataURL || child.coverBlurDataURL
+                            ? "blur"
+                            : "empty"
+                        }
+                        blurDataURL={
+                          child.thumbBlurDataURL ?? child.coverBlurDataURL
+                        }
                         className="aspect-square w-[300px] object-cover shadow-[0_0_8px_2px_#ddd]"
                       />
                       <figcaption className="mt-1 max-w-[255px]">

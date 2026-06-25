@@ -14,6 +14,7 @@ export type SiteConfig = {
   profile: {
     name: string
     avatar: string
+    logo: string
     bioTitle: string
     bioSummary: string
     about: {
