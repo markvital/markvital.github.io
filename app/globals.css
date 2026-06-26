@@ -44,6 +44,50 @@ a {
   color: #9393a5;
 }
 
+.prose-markdown h2,
+.prose-markdown h3,
+.prose-markdown h4 {
+  margin: 2rem 0 1rem;
+  color: var(--foreground);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.prose-markdown h2 {
+  font-size: 1.5rem;
+}
+
+.prose-markdown h3 {
+  font-size: 1.25rem;
+}
+
+.prose-markdown h4 {
+  font-size: 1.125rem;
+}
+
+.prose-markdown p,
+.prose-markdown ul,
+.prose-markdown ol,
+.prose-markdown blockquote,
+.prose-markdown pre {
+  margin: 0 0 1rem;
+}
+
+.prose-markdown ul,
+.prose-markdown ol {
+  padding-left: 1.5rem;
+}
+
+.prose-markdown li + li {
+  margin-top: 0.25rem;
+}
+
+.prose-markdown blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+  color: var(--muted-foreground);
+}
+
 .prose-markdown img {
   max-width: 100%;
   height: auto;
