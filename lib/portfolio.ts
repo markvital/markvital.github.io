@@ -2,6 +2,7 @@ import fs from "node:fs"
 import path from "node:path"
 import matter from "gray-matter"
 import MarkdownIt from "markdown-it"
+import { imageBlurData } from "@/lib/generated/image-blur-data"
 
 const portfolioDir = path.join(process.cwd(), "content", "portfolio")
 
@@ -37,13 +38,6 @@ const markdown = new MarkdownIt({
   linkify: true,
   typographer: true,
 })
-
-type BlurManifest = Record<string, string>
-
-const blurManifestPath = path.join(process.cwd(), "public", "image-blur-manifest.json")
-const blurManifest: BlurManifest = fs.existsSync(blurManifestPath)
-  ? (JSON.parse(fs.readFileSync(blurManifestPath, "utf8")) as BlurManifest)
-  : {}
 
 function isVisibleDirectory(entry: fs.Dirent) {
   return entry.isDirectory() && !entry.name.startsWith(".")
@@ -99,7 +93,7 @@ function blurDataUrl(publicUrl?: string) {
     return undefined
   }
 
-  return blurManifest[publicUrl]
+  return imageBlurData[publicUrl]
 }
 
 export function projectUrlPath(slug: string) {
