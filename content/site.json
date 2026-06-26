@@ -30,13 +30,13 @@
     "avatar": "/profile-pic.png",
     "logo": "/profile-pic.png",
     "bioTitle": "Developing Software From Web2 to Web3",
-    "bioSummary": "A web developer and information designer who lives in crypto universe and builds things with code.",
+    "bioSummary": "A web developer and information designer who lives in the crypto universe and builds things with code.",
     "about": {
       "title": "About Me",
       "description": "Mark Vital is an information designer and programmer.",
       "paragraphs": [
-        "I&apos;m a full stack developer with an eye for user interfaces and a sense of usability. I have worked in large corporations for half of my career and in a startups later on. I feel like I have now combined both the professionalism of working on advanced products with the hacker mindset of a startup. I lean towards using open-sources frameworks and tools to achieve fast results.",
-        "Besides the software development my passion is an information design. Together with <a class=\"text-[var(--accent)]\" href=\"http://twitter.com/annavitals\">@annavital</a> we created multiple <a class=\"text-[var(--accent)]\" href=\"https://blog.adioma.com\">infographics</a> and a data visualization tool."
+        "I&apos;m a full stack developer with an eye for user interfaces and a sense of usability. I have worked in large corporations for half of my career and in startups later on. I feel like I have now combined both the professionalism of working on advanced products with the hacker mindset of a startup. I lean toward using open-source frameworks and tools to achieve fast results.",
+        "Besides software development, my passion is information design. Together with <a class=\"text-[var(--accent)]\" href=\"http://twitter.com/annavitals\">@annavital</a>, we created multiple <a class=\"text-[var(--accent)]\" href=\"https://blog.adioma.com\">infographics</a> and a data visualization tool."
       ],
       "cover": "/about-cover.jpg",
       "coverAlt": "Mark Vital"

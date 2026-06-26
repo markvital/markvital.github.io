@@ -1,7 +1,7 @@
 ---
 title: What The Internet Thinks Interactive Infographic
 date: "2015-09-28T22:40:32.169Z"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit
+description: An interactive visualization of the most-shared articles on the internet based on Ahrefs data.
 coverImage: ./thumb/cover.jpg
 thumbImage: ./thumb/thumb.jpg
 ---

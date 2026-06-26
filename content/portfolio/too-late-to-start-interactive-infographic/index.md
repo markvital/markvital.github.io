@@ -1,7 +1,7 @@
 ---
 title: Too Late To Start - Interactive Infographic
 date: "2015-05-28T22:40:32.169Z"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit
+description: An infographic about the most common age at which successful founders started their companies.
 coverImage: ./thumb/cover.jpg
 thumbImage: ./thumb/thumb.jpg
 ---
