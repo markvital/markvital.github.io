@@ -9,3 +9,5 @@ thumbImage: ./thumb/thumb.jpg
 I implemented NFT PFP Cache for NFT domains for Untstoppable Domains.
 Users have an ability to set an avatar based from NFTs images that are tied to the wallet.
 The need of the cache arose because some of those images load from IPF which made user experience hard. I used Puppeteer to support rendering of both SVG and PNG images and convert it to JPG in the worker.
+Tech: React.js, Node.js, TypeScript, Web3.js, Ethers.js, Blockchain, NFT, Ethereum, Polygon, IPFS
+Scope: Development

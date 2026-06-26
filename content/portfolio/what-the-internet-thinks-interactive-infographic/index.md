@@ -14,4 +14,6 @@ Interactive visualization of the most-shared articles on the internet based on A
 
 ![animation](./animation.gif)
 
+![infographic](./what-the-internet-thinks-about-based-on-popular-media-infographic.png)
+
 [Explore the project](https://blog.adioma.com/what-internet-thinks-based-on-media-infographic/)
