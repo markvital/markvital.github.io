@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" role="img" aria-labelledby="title desc">
+  <title id="title">Mark Vital logo</title>
+  <desc id="desc">Monogram logo for the Mark Vital website</desc>
+  <circle cx="17.5" cy="17.5" r="17" fill="#f5f1ea" stroke="#cfc7bb" />
+  <path d="M11 24V11.5h2.4l4.1 6.2 4.1-6.2H24V24h-2.3v-8.1l-4.1 6.2h-.4l-4.1-6.2V24H11Z" fill="#1f1a17" />
+  <path d="M14.1 9.5h6.8" stroke="#1f1a17" stroke-linecap="round" stroke-width="1.2" />
+</svg>
