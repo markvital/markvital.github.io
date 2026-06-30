@@ -44,6 +44,10 @@ a {
   color: #9393a5;
 }
 
+.prose-markdown strong {
+  font-weight: 700;
+}
+
 .prose-markdown h2,
 .prose-markdown h3,
 .prose-markdown h4 {
