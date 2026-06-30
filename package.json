@@ -11,6 +11,8 @@
     "dev": "next dev",
     "prebuild": "node scripts/sync-content-assets.mjs",
     "build": "next build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d out",
     "preview": "python3 -m http.server 8001 --bind 127.0.0.1 --directory out",
     "start": "next start",
     "lint": "next lint",
@@ -36,6 +38,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "gh-pages": "^6.3.0",
     "prettier": "latest",
     "shadcn": "latest",
     "typescript": "latest"

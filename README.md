@@ -54,7 +54,13 @@ Static pages such as About, Contact, and 404 live in `app/`.
 
 ## Deploy
 
-The site is hosted on GitHub Pages. Deployment is handled by the GitHub Actions workflow once it is added in the deployment step.
+Build and publish the static export to the `gh-pages` branch:
+
+```sh
+yarn deploy
+```
+
+The GitHub Actions workflow also runs this command on pushes to `master`.
 
 ## Notes
 

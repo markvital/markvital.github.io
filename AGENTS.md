@@ -36,8 +36,9 @@ yarn preview
 
 ## Deployment
 
+- Run `yarn deploy` to build and publish the static export to the `gh-pages` branch.
 - GitHub Pages deployment is handled by `.github/workflows/deploy.yml`.
-- The workflow is manual via `workflow_dispatch`.
+- The workflow runs on pushes to `master` and can also be started manually.
 - Static output is exported to `out/`.
 
 ## Audit Expectations
