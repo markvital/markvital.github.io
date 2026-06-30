@@ -18,4 +18,4 @@ On the backend, the data was cleaned and aggregated using Python.
 
 **Scope**: development, project/product management 
 
-[Explore the project](https://blog.adioma.com/visualization-universe-interactive-dashboard/)
+[Explore the project](https://visualizationuniverse.adioma.com)

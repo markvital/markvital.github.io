@@ -11,6 +11,7 @@ The documents are stored in a MongoDB database on the backend.
 The user authentication system is implemented using JSON Web Tokens.
 The backend is managed with React Admin.
 
-*Tech*: React, Node.js, MongoDB, SVG, React Admin
 
-Scope: development
+**Tech**: React, Node.js, MongoDB, SVG, React Admin
+
+**Scope**: development

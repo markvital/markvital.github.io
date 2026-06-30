@@ -12,6 +12,7 @@ This is an interactive visualization showing how different cities searched to fi
 
 **Scope**: development, information design
 
+
 ## Design elements
 
 Each of the 12 circles represents a city color-coded to tie together its location on the world map, the time on the timeline, and the questions asked by each city. The questions are represented as a tree that appears when a person taps on a circle. Transparent "halos" around the circles are reminiscent of how information spreads, like radio waves. When a person taps on a city, the timeline is animated with a line traveling from Paris to that city.
