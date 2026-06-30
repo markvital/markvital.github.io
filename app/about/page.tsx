@@ -23,6 +23,8 @@ export default function AboutPage() {
         <Image
           src={site.profile.about.cover}
           alt={site.profile.about.coverAlt}
+          width={1702}
+          height={630}
           className="mt-8 h-auto w-full"
           priority
         />
