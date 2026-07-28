@@ -16,9 +16,9 @@ them in Git, browser code, `.env.example`, or this README.
 - `EMAIL_FROM` — sender such as `Portfolio Contact <contact@your-domain.com>`.
   Resend must have verified the sender domain/address first.
 
-`ALLOWED_ORIGINS` is a non-secret Worker variable in `wrangler.toml`. Replace
-the listed origins with your real production portfolio origin(s); only retain
-the localhost origins while you need local development.
+`ALLOWED_ORIGINS` is a non-secret Worker variable in `wrangler.toml` and is
+restricted to the production portfolio origin. Localhost origins belong only in
+the ignored `.dev.vars` file.
 
 ## Local development
 

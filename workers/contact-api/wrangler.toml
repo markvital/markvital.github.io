@@ -2,7 +2,6 @@ name = "portfolio-contact"
 main = "src/index.ts"
 compatibility_date = "2026-07-28"
 
-# Comma-separated browser origins allowed to call this Worker. Keep production
-# origins explicit; localhost entries are for local development only.
+# Comma-separated browser origins allowed to call this deployed Worker.
 [vars]
-ALLOWED_ORIGINS = "https://markvital.github.io,http://localhost:3000,http://127.0.0.1:3000"
+ALLOWED_ORIGINS = "https://markvital.github.io"
