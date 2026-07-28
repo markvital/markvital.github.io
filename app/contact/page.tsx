@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { ContactForm } from "@/components/contact-form"
 import { SiteShell } from "@/components/site-shell"
 import { site } from "@/lib/site"
 
@@ -11,8 +12,8 @@ export default function ContactPage() {
   return (
     <SiteShell>
       <h1 className="my-8 text-4xl font-bold">{site.profile.contact.title}</h1>
-      <p>{site.profile.contact.intro}</p>
-      <p>&lt; not implemented yet &gt;</p>
+      <p className="mb-8">{site.profile.contact.intro}</p>
+      <ContactForm />
     </SiteShell>
   )
 }
