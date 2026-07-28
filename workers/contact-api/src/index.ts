@@ -5,6 +5,7 @@ interface Env {
   CONTACT_TO_EMAIL: string
   EMAIL_FROM: string
   RESEND_API_URL?: string
+  SEND_CONFIRMATION_EMAIL?: string
 }
 
 type ContactPayload = {
@@ -161,21 +162,23 @@ export default {
         cors,
       )
 
-    const confirmationSent = await sendEmail(env, {
-      from: env.EMAIL_FROM,
-      to: [email],
-      subject: "Thanks for contacting Mark Vital",
-      text: `Hi ${name},\n\nThanks for getting in touch. Your message has been received and Mark will reply as soon as possible.\n\nBest,\nMark Vital`,
-    })
-    if (!confirmationSent)
-      return json(
-        {
-          message:
-            "Your message was received, but we could not send the confirmation email.",
-        },
-        502,
-        cors,
-      )
+    if (env.SEND_CONFIRMATION_EMAIL !== "false") {
+      const confirmationSent = await sendEmail(env, {
+        from: env.EMAIL_FROM,
+        to: [email],
+        subject: "Thanks for contacting Mark Vital",
+        text: `Hi ${name},\n\nThanks for getting in touch. Your message has been received and Mark will reply as soon as possible.\n\nBest,\nMark Vital`,
+      })
+      if (!confirmationSent)
+        return json(
+          {
+            message:
+              "Your message was received, but we could not send the confirmation email.",
+          },
+          502,
+          cors,
+        )
+    }
 
     return json({ message: "Your message has been sent." }, 200, cors)
   },

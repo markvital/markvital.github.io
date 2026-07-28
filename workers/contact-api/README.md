@@ -37,6 +37,10 @@ both Worker email requests are accepted by the local mock rather than Resend.
 Open `http://127.0.0.1:8788/emails` to view received mock messages. Never set
 `RESEND_API_URL` in production; omit it so the Worker uses Resend's API.
 
+To temporarily test only the owner notification, set
+`SEND_CONFIRMATION_EMAIL=false`. Omit this setting (or set it to `true`) for
+the normal two-email production flow.
+
 ## Static-site public values
 
 Copy the root `.env.example` to `.env.local` and set only:
