@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-contact-worker",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "mock:resend": "node scripts/mock-resend.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.115.0"
+  }
+}
