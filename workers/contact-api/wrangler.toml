@@ -1,0 +1,10 @@
+name = "portfolio-contact"
+main = "src/index.ts"
+compatibility_date = "2026-07-28"
+
+# Comma-separated browser origins allowed to call this deployed Worker.
+[vars]
+ALLOWED_ORIGINS = "https://markvital.github.io"
+CONTACT_TO_EMAIL = "markvital.x@gmail.com"
+EMAIL_FROM = "Portfolio Contact <onboarding@resend.dev>"
+SEND_CONFIRMATION_EMAIL = "false"

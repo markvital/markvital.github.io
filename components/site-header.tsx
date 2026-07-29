@@ -19,16 +19,22 @@ export function SiteHeader() {
         </Link>
         <div className="ml-auto flex items-center gap-1">
           <Link
+            className="hidden rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800 sm:inline"
+            href="/work/"
+          >
+            {site.nav.works}
+          </Link>
+          <Link
             className="rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800"
             href="/about/"
           >
             {site.nav.about}
           </Link>
           <Link
-            className="hidden rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800 sm:inline"
-            href="/work/"
+            className="rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800"
+            href="/contact/"
           >
-            {site.nav.works}
+            contact
           </Link>
         </div>
       </nav>

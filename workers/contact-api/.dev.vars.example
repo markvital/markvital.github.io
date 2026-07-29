@@ -1,0 +1,6 @@
+# Copy to .dev.vars for `yarn dev`. This file is ignored and must never be committed.
+ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+RESEND_API_KEY=replace-with-a-resend-api-key
+TURNSTILE_SECRET_KEY=replace-with-a-turnstile-secret-key
+CONTACT_TO_EMAIL=you@example.com
+EMAIL_FROM=Portfolio Contact <contact@example.com>

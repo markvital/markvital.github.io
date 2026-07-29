@@ -31,3 +31,6 @@ jobs:
 
       - name: Deploy to gh-pages
         run: yarn deploy
+        env:
+          NEXT_PUBLIC_CONTACT_WORKER_URL: ${{ vars.NEXT_PUBLIC_CONTACT_WORKER_URL }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
