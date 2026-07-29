@@ -1,3 +1,3 @@
-:HL["/_next/static/chunks/3ko4m9wqgwz8l.css","style"]
+:HL["/_next/static/chunks/1wna41xj-07gc.css","style"]
 :HC["/",""]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"slug","param":{"type":"d","key":"web-based-infographic-vector-editor","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"child","param":{"type":"d","key":"editor-screen","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"7ime8g-gEh5VfNo_tjLQS"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"slug","param":{"type":"d","key":"web-based-infographic-vector-editor","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"child","param":{"type":"d","key":"editor-screen","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"gOr86dNibOTnYomrLa4hV"}
