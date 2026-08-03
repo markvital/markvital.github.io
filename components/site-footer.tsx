@@ -4,14 +4,14 @@ import { ThemeToggle } from "@/components/theme-toggle"
 export function SiteFooter() {
   return (
     <footer className="shrink-0 px-5 pb-3 pt-10 text-[var(--muted-foreground)]">
-      <div className="grid gap-4 text-center sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:text-left">
-        <div className="sm:justify-self-start">
+      <div className="relative grid gap-4 text-center md:flex md:items-center md:justify-between md:text-left">
+        <div>
           {site.copyrightName} © {new Date().getFullYear()}
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center md:absolute md:left-1/2 md:-translate-x-1/2">
           <ThemeToggle showLabel />
         </div>
-        <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:justify-self-end sm:justify-end">
+        <ul className="flex flex-col items-center gap-y-2 md:flex-row md:justify-end md:gap-x-3 md:gap-y-0">
           {site.socialLinks.map(link => (
             <li key={link.href}>
               <a
