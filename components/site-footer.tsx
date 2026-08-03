@@ -4,15 +4,15 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteFooter() {
   return (
-    <footer className="shrink-0 px-5 pb-3 pt-10 text-[var(--muted-foreground)]">
-      <div className="flex flex-col items-center gap-y-2 text-center 2xl:flex-row 2xl:items-center 2xl:justify-between 2xl:text-left">
-        <div className="flex flex-col items-center gap-y-2 2xl:flex-row 2xl:items-center 2xl:gap-x-3">
+    <footer className="shrink-0 px-5 pb-3 pt-[50px] text-[var(--muted-foreground)]">
+      <div className="flex flex-col items-center gap-y-2 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
+        <div className="flex flex-col items-center gap-y-2 lg:flex-row lg:items-center lg:gap-x-3">
           <div className="whitespace-nowrap">
             <Link href="/">{site.copyrightName}</Link> © {new Date().getFullYear()}
           </div>
           <nav
             aria-label="Footer navigation"
-            className="flex flex-col items-center gap-y-2 2xl:flex-row 2xl:gap-x-3 2xl:gap-y-0"
+            className="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-3 lg:gap-y-0"
           >
           <ThemeToggle showLabel />
           <Link
@@ -29,7 +29,7 @@ export function SiteFooter() {
           </Link>
           </nav>
         </div>
-        <ul className="flex flex-col items-center gap-y-2 2xl:flex-row 2xl:justify-end 2xl:gap-x-3 2xl:gap-y-0">
+        <ul className="flex flex-col items-center gap-y-2 lg:flex-row lg:justify-end lg:gap-x-3 lg:gap-y-0">
           {site.socialLinks.map(link => (
             <li key={link.href}>
               <a
