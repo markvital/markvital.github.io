@@ -35,7 +35,9 @@ export function ThemeToggle({
           variant="ghost"
         >
           <ThemeIcon aria-hidden="true" />
-          {showLabel ? <span>Theme</span> : null}
+          {showLabel ? (
+            <span className="text-[0.75em] tracking-[0.08em]">THEME</span>
+          ) : null}
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
