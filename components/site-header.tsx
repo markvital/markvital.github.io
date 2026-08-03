@@ -4,8 +4,8 @@ import { site } from "@/lib/site"
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-neutral-200 bg-white shadow-sm">
-      <nav className="flex items-center px-5 py-1 text-base font-normal text-[#9f9c9d]">
+    <header className="border-b border-[var(--border)] bg-[var(--surface)] shadow-sm">
+      <nav className="flex items-center px-5 py-1 text-base font-normal text-[var(--muted-foreground)]">
         <Link className="flex items-center gap-3 px-0 py-2 sm:px-3" href="/">
           <Image
             src={site.profile.logo}
@@ -19,19 +19,19 @@ export function SiteHeader() {
         </Link>
         <div className="ml-auto flex items-center gap-1">
           <Link
-            className="hidden rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800 sm:inline"
+            className="hidden rounded-md px-4 py-2 transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--foreground)] active:bg-[var(--surface-active)] sm:inline"
             href="/work/"
           >
             {site.nav.works}
           </Link>
           <Link
-            className="rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800"
+            className="rounded-md px-4 py-2 transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--foreground)] active:bg-[var(--surface-active)]"
             href="/about/"
           >
             {site.nav.about}
           </Link>
           <Link
-            className="rounded-md px-4 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-700 active:bg-neutral-200 active:text-neutral-800"
+            className="rounded-md px-4 py-2 transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--foreground)] active:bg-[var(--surface-active)]"
             href="/contact/"
           >
             contact

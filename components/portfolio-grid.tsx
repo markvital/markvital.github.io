@@ -22,12 +22,12 @@ export function PortfolioGrid({
               height={350}
               placeholder={project.thumbBlurDataURL ? "blur" : "empty"}
               blurDataURL={project.thumbBlurDataURL}
-              className="aspect-square w-full rounded-[5px] border-2 border-neutral-300 object-cover saturate-[25%] transition group-hover:saturate-100"
+              className="aspect-square w-full rounded-[5px] border-2 border-[var(--border)] object-cover saturate-[25%] transition group-hover:saturate-100"
             />
           ) : (
-            <div className="aspect-square w-full rounded-[5px] border-2 border-neutral-300 bg-neutral-100" />
+            <div className="aspect-square w-full rounded-[5px] border-2 border-[var(--border)] bg-[var(--surface-muted)]" />
           )}
-          <h2 className="mt-4 text-base font-bold text-neutral-400 transition group-hover:text-neutral-600">
+          <h2 className="mt-4 text-base font-bold text-[var(--muted-foreground)] transition group-hover:text-[var(--foreground)]">
             {project.title}
           </h2>
         </Link>

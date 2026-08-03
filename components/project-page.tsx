@@ -54,7 +54,7 @@ export function ProjectPage({
               {project.children.map(child => (
                 <li className="m-0" key={child.slug}>
                   <Link
-                    className="text-[var(--accent)] no-underline hover:text-[#2C2060]"
+                    className="text-[var(--accent)] no-underline hover:text-[var(--accent-active)]"
                     href={`/${child.urlSlug}/`}
                     title={child.title}
                   >
@@ -72,7 +72,7 @@ export function ProjectPage({
                         blurDataURL={
                           child.thumbBlurDataURL ?? child.coverBlurDataURL
                         }
-                        className="aspect-square w-[300px] object-cover shadow-[0_0_8px_2px_#ddd]"
+                        className="aspect-square w-[300px] object-cover shadow-[0_0_8px_2px_var(--image-shadow)]"
                       />
                       <figcaption className="mt-1 max-w-[255px]">
                         {child.title}
@@ -86,7 +86,7 @@ export function ProjectPage({
         ) : null}
       </article>
 
-      <nav className="mt-8 border-t border-neutral-200 pt-5">
+      <nav className="mt-8 border-t border-[var(--border)] pt-5">
         {parentHref ? (
           <div className="mb-6 text-center">
             <Link className="whitespace-nowrap" href={parentHref} title={parentTitle}>
