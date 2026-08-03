@@ -7,6 +7,9 @@ export function SiteFooter() {
     <footer className="shrink-0 px-5 pb-3 pt-10 text-[var(--muted-foreground)]">
       <div className="flex flex-col gap-4 text-left md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-x-3">
+          <div>
+            <Link href="/">{site.copyrightName}</Link> © {new Date().getFullYear()}
+          </div>
           <nav
             aria-label="Footer navigation"
             className="flex items-center justify-start gap-x-3"
@@ -25,9 +28,6 @@ export function SiteFooter() {
               contact
             </Link>
           </nav>
-          <div>
-            <Link href="/">{site.copyrightName}</Link> © {new Date().getFullYear()}
-          </div>
         </div>
         <ul className="flex flex-col items-center gap-y-2 md:flex-row md:justify-end md:gap-x-3 md:gap-y-0">
           {site.socialLinks.map(link => (
