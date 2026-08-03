@@ -12,7 +12,7 @@ export function SiteFooter() {
           </div>
           <nav
             aria-label="Footer navigation"
-            className="flex items-center justify-start gap-x-3"
+            className="flex flex-col items-start gap-y-2 md:flex-row md:items-center md:gap-x-3 md:gap-y-0"
           >
             <ThemeToggle showLabel />
             <Link
