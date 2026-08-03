@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteFooter() {
   return (
-    <footer className="shrink-0 px-5 pb-3 pt-[50px] text-[var(--muted-foreground)]">
+    <footer className="shrink-0 px-5 pb-3 pt-[75px] text-[var(--muted-foreground)]">
       <div className="flex flex-col items-center gap-y-2 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
         <div className="flex flex-col items-center gap-y-2 lg:flex-row lg:items-center lg:gap-x-3">
           <div className="whitespace-nowrap">
