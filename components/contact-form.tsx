@@ -178,11 +178,11 @@ export function ContactForm() {
           onChange={event => updateField("name", event.target.value)}
           aria-describedby={errors.name ? `${formId}-name-error` : undefined}
           aria-invalid={Boolean(errors.name)}
-          className="w-full rounded-md border border-neutral-300 px-3 py-2 outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[#644ba040]"
+          className="w-full rounded-md border border-[var(--border)] px-3 py-2 outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--focus-ring)]"
           required
         />
         {errors.name ? (
-          <p className="mt-1 text-sm text-red-700" id={`${formId}-name-error`}>
+          <p className="mt-1 text-sm text-[var(--error)]" id={`${formId}-name-error`}>
             {errors.name}
           </p>
         ) : null}
@@ -200,11 +200,11 @@ export function ContactForm() {
           onChange={event => updateField("email", event.target.value)}
           aria-describedby={errors.email ? `${formId}-email-error` : undefined}
           aria-invalid={Boolean(errors.email)}
-          className="w-full rounded-md border border-neutral-300 px-3 py-2 outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[#644ba040]"
+          className="w-full rounded-md border border-[var(--border)] px-3 py-2 outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--focus-ring)]"
           required
         />
         {errors.email ? (
-          <p className="mt-1 text-sm text-red-700" id={`${formId}-email-error`}>
+          <p className="mt-1 text-sm text-[var(--error)]" id={`${formId}-email-error`}>
             {errors.email}
           </p>
         ) : null}
@@ -223,12 +223,12 @@ export function ContactForm() {
             errors.message ? `${formId}-message-error` : undefined
           }
           aria-invalid={Boolean(errors.message)}
-          className="w-full resize-y rounded-md border border-neutral-300 px-3 py-2 outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[#644ba040]"
+          className="w-full resize-y rounded-md border border-[var(--border)] px-3 py-2 outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--focus-ring)]"
           required
         />
         {errors.message ? (
           <p
-            className="mt-1 text-sm text-red-700"
+            className="mt-1 text-sm text-[var(--error)]"
             id={`${formId}-message-error`}
           >
             {errors.message}
@@ -255,10 +255,10 @@ export function ContactForm() {
           <p
             className={
               status === "error"
-                ? "text-red-700"
+                ? "text-[var(--error)]"
                 : status === "success"
-                  ? "text-green-800"
-                  : "text-neutral-600"
+                  ? "text-[var(--success)]"
+                  : "text-[var(--muted-foreground)]"
             }
           >
             {statusMessage}
@@ -267,7 +267,7 @@ export function ContactForm() {
       </div>
       <div className="flex justify-center pt-1">
         <Button
-          className="h-12 border-[var(--accent)] bg-[var(--accent)] px-6 text-base text-white hover:bg-[#513d82] hover:text-white active:bg-[#2c2060] focus-visible:ring-[var(--accent)]"
+          className="h-12 border-[var(--accent)] bg-[var(--accent)] px-6 text-base text-white hover:bg-[var(--accent-hover)] hover:text-white active:bg-[var(--accent-active)] focus-visible:ring-[var(--accent)]"
           type="submit"
           disabled={isSubmitting}
           aria-disabled={isSubmitting}

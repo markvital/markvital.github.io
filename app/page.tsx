@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <SiteShell full>
       <Bio />
-      <p className="mb-10 mt-11 text-center text-xl text-neutral-400">
+      <p className="mb-10 mt-11 text-center text-xl text-[var(--muted-foreground)]">
         Recent works
       </p>
       <PortfolioGrid projects={projects} />

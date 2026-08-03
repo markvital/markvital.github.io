@@ -14,7 +14,7 @@ export default function WorkPage() {
 
   return (
     <SiteShell full>
-      <p className="my-8 text-center text-xl text-neutral-500">
+      <p className="my-8 text-center text-xl text-[var(--muted-foreground)]">
         Recent works
       </p>
       <PortfolioGrid projects={projects} />
