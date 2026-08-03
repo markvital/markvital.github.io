@@ -6,7 +6,9 @@ import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 
-export function ThemeToggle() {
+export function ThemeToggle({
+  showLabel = false,
+}: Readonly<{ showLabel?: boolean }>) {
   const { resolvedTheme, setTheme, theme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -23,12 +25,13 @@ export function ThemeToggle() {
       <DropdownMenu.Trigger asChild>
         <Button
           aria-label={label}
-          className="h-10 w-10 p-0"
+          className={showLabel ? "h-auto px-2 py-1" : "h-10 w-10 p-0"}
           title={label}
           type="button"
           variant="ghost"
         >
           <ThemeIcon aria-hidden="true" />
+          {showLabel ? <span>Theme</span> : null}
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>

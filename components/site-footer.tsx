@@ -1,4 +1,5 @@
 import { site } from "@/lib/site"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteFooter() {
   return (
@@ -8,6 +9,9 @@ export function SiteFooter() {
           {site.copyrightName} © {new Date().getFullYear()}
         </div>
         <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:justify-end">
+          <li>
+            <ThemeToggle showLabel />
+          </li>
           {site.socialLinks.map(link => (
             <li key={link.href}>
               <a

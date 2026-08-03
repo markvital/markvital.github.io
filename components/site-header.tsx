@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { site } from "@/lib/site"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   return (
@@ -37,7 +36,6 @@ export function SiteHeader() {
           >
             contact
           </Link>
-          <ThemeToggle />
         </div>
       </nav>
     </header>
