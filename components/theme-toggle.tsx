@@ -25,7 +25,11 @@ export function ThemeToggle({
       <DropdownMenu.Trigger asChild>
         <Button
           aria-label={label}
-          className={showLabel ? "h-auto px-2 py-1" : "h-10 w-10 p-0"}
+          className={
+            showLabel
+              ? "h-auto px-2 py-1 text-base font-normal"
+              : "h-10 w-10 p-0"
+          }
           title={label}
           type="button"
           variant="ghost"
